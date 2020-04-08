@@ -4,7 +4,7 @@ function buscarPeliculas(){
     nombree = document.getElementById("nombre").value;
     console.log(nombree);
     var detalles ="";
-    if(nombree=""){
+    if(nombree == ""){
         detalles = "<td> No se encontraron resultados </td>";
         document.getElementById("Informacion").innerHTML= detalles;
 
