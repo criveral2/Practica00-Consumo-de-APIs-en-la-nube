@@ -1,46 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Buscador de Peliculas </title>
-        <link rel="stylesheet" href="estilos.css">
-        <script src="buscador.js"></script>
-    </head>
-    <body>
-        <header>
-            <H1>Busca Tus Peliculas AQUI</H1>
 
-        </header>
-        <section>
-            <form action="">
-            <h2>
-                Nombre:
-            </h2>
-            <input type="text" placeholder="Nombre de la pelicula" id="nombre">
-            <input type="button" value="Buscar" onclick="buscarPeliculas()">
-            </form>
-        </section>
-        <table>
-        <tr>
-            <td>
-                <div id="Informacion"> 
+<head>
+    <meta charset="utf-8">
+    <title>Buscador de Peliculas </title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="buscador.js"></script>
 
-                </div>
-            </td>
-        </tr>
-        </table>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-        </section>
-        <footer>
-            <hr />
-            <p>Christian Geovanny Rivera Loja<br>
-                Universidad Politécnica Salesiana<br>
-                <!--&nbsp; es codigo que nos permitira obtener un espacio en blanco en html-->
-                mail:&nbsp;<a href="mailto:criveral2@est.ups.edu.ec">criveral2@est.ups.edu.ec</a><br>
-                telefono:&nbsp;<a href="tel:0991748263">0991748263</a><br>
-                <!--&#169; este codigo permitira generar el simbolo de copyright -->
-                  &#169;Todos los derechos reservados</p>
+        <!-- Development version -->
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
 
-        </footer>
-    </body>
+<!-- Production version -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+
+</head>
+
+
+
+<body>
+   
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-12">
+                <header class="logo">
+                    <div class="page-header height: auto; ">
+
+                        <div class="container text-center text-black">
+                            <H1 class="display-1 m-5"><b>Busca Tus Peliculas AQUI</b></H1>
+                            <form action=""class="">
+
+                                <input type="text" placeholder="Nombre de la pelicula" id="nombre">
+                                <button type="button" onclick="buscarPeliculas()" class="btn btn-info ">Buscar</button>
+
+                                <!-- <input type="button" value="Buscar" onclick="buscarPeliculas()"> -->
+                            </form>
+                        </div>
+                    </div>
+                </header>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <h1>PELICULAS</h1>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3" id="idfoto">
+            <div class="card-deck dropdown">
+         
+
+
+            </div>
+            <div id="Det" class="dropdown">
+                
+            </div>
+        </div>
+        
+
+    </div>
+
+
+    <div class="container">
+        
+        <div class="container-fluid bg-primary ">
+            <h2 class="text-center" id="in">INFORMACION</h2>
+            <div id="deta">
+
+            </div>
+
+        </div>
+       
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src=https://code.jquery.com/jquery-3.4.1.min.js> </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
