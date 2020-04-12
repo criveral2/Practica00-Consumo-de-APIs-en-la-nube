@@ -41,9 +41,9 @@ function buscarPeliculas(pagina) {
                             <div class=" containerimg ">
                                 <img class="card-img-top image "  src="${pelicula.Poster}">
                                     <div class="overlay">
-                                    <div class="text" id="inectar">
+                                    <div class="text-center" style=" padding-top: 200px;"id="inectar">
                                     <h1><b>`+ pelicula.Title + `</b></h1><br></br>
-                                    <a href="#in"    onclick=\"CargarInformacion('${pelicula.imdbID}')\" >INFORMACION</a>
+                                    <a href="#in" style="color: rgb(225, 235, 245); font-size: 0.5cm;"   onclick=\"CargarInformacion('${pelicula.imdbID}')\" >MAS INFORMACION<br>CLIC AQUI</a>
                                     </div>
                                   </div>
                               

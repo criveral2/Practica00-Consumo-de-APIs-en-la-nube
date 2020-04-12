@@ -20,8 +20,18 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-.flotar{
+
+
+footer{
+    color: white;
+    background-color: rgb(8, 9, 68);
+    text-align: center; 
     clear: both;
+    font-size: 0.5cm;
+}
+
+.espacio{
+padding-top: 2.7cm;
 }
 
 
