@@ -1,5 +1,7 @@
 
-function buscarPeliculas() {
+var resultadospag=0;
+
+function buscarPeliculas(pagina) {
     var nombree = "";
     nombree = document.getElementById("nombre").value;
     console.log(nombree);
@@ -20,7 +22,14 @@ function buscarPeliculas() {
                 var datos = JSON.parse(this.responseText)
                 console.log(datos);
 
+                resultadospag=datos.totalResults;
+
+                console.log(resultadospag);
+               
+
                 datos.Search.forEach(pelicula => {
+
+                   
                     console.log(pelicula.imdbID);
 
 
@@ -48,7 +57,7 @@ function buscarPeliculas() {
                     </div>
                 
                         `;
-
+                    paginar(pagina);
 
                 });
 
@@ -56,7 +65,7 @@ function buscarPeliculas() {
 
             }
         };
-        xmlhttp.open("GET", "http://www.omdbapi.com/?apikey=6880f25c&s=" + nombree + "&plot=full", true);
+        xmlhttp.open("GET", "http://www.omdbapi.com/?apikey=6880f25c&s=" + nombree + "&plot=full&page="+pagina, true);
         xmlhttp.send();
     }
     return false;
@@ -86,7 +95,7 @@ function CargarInformacion(id) {
 
         </div>
         <div class="container p-3 my-3 bg-primary text-white col-sm-8">
-        <p>Titulo: `+ pelicula.Title + ` </p>
+        <p>Titulo: `+ pelicula.Title  + ` </p>
         <p>Año: `+ pelicula.Year + ` </p>
         <p>Genero: `+ pelicula.Genre + ` </p>
         <p>Duracion: `+ pelicula.Runtime + `</p>
@@ -108,9 +117,82 @@ function CargarInformacion(id) {
     xmlhttp.open("GET", "http://www.omdbapi.com/?apikey=447abae5&i=" + id + "&plot=full", true);
     xmlhttp.send();
 
+}
 
 
 
+
+function paginar(paginaa){
+    console.log("-------------------entrosimo-----------------------");
+    console.log(paginaa)
+
+   var controlador = 0;
+   controlador = Math.abs(resultadospag/10) ;
+
+  
+if(paginaa >= controlador){
+    var n="";
+    n += `
+          
+            <nav>
+            <ul class="pager">
+
+                <li class="previous"><a href="#" onclick="buscarPeliculas(`+ (paginaa-1) +`)">Aterior </a></li> 
+
+                <li  class="disabled" ><a href="">`+ paginaa +`</a></li>
+
+                <li class="next disabled"><a href="#" onclick="buscarPeliculas(`+ (paginaa) +`)" >Siguiente &larr; </a></li> 
+
+            </ul>
+            </nav>
+
+
+            `
+
+}else{
+    if(paginaa <= 1){
+        var n="";
+        n += `
+              
+                <nav>
+                <ul class="pager">
+    
+                    <li class="previous disabled"><a href="#" onclick="buscarPeliculas(`+ (paginaa) +`)">Aterior </a></li> 
+    
+                    <li  class="disabled" ><a href="">`+ paginaa +`</a></li>
+    
+                    <li class="next"><a href="#" onclick="buscarPeliculas(`+ (paginaa+1) +`)" >Siguiente &larr; </a></li> 
+    
+                </ul>
+                </nav>
+    
+    
+                `
+
+
+    }else{
+        var n="";
+        n += `
+              
+                <nav>
+                <ul class="pager">
+    
+                    <li class="previous"><a href="#" onclick="buscarPeliculas(`+ (paginaa-1) +`)">Aterior </a></li> 
+    
+                    <li  class="disabled" ><a href="">`+ paginaa +`</a></li>
+    
+                    <li class="next"><a href="#" onclick="buscarPeliculas(`+ (paginaa+1) +`)" >Siguiente &larr; </a></li> 
+    
+                </ul>
+                </nav>
+    
+    
+                `
+    }
+}
+
+
+    document.getElementById("navegar").innerHTML=n;
 
 
 

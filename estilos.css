@@ -69,3 +69,14 @@ body{
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
   }
+
+
+
+  .titulo {
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Helvetica, sans-serif;
+    font-size: 8000px;
+
+  }
+
+  
