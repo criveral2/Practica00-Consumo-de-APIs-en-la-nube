@@ -62,6 +62,8 @@ En el archivo css procedemos a crear diferentes estilos que no se encuentran en 
 
 Esto ayudara a mejorar la interfaz y hacer que los usuarios de una manera intuitiva puedan manejar y realizar el servicio que ofrece la api OMBD, cabe mencionar que el sistema se posiciona sobre la información de una película evitando así que el usuario deba buscar de una manera más amplia, como también se restringirá y se controlara el uso de la navegación entre las páginas.
 
+Video: https://youtu.be/plHknXnEKG4
+
 <pre>
 RESULTADO(S) OBTENIDO(S):
 Manipular servicios web y e identificar la estructura y metodología aplicada por la web para la manipular un conjunto de archivos JSON 
