@@ -69,7 +69,7 @@ function buscarPeliculas(pagina) {
         xmlhttp.send();
     }
     return false;
-
+    
 }
 
 function CargarInformacion(id) {
